@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form</title>
+</head>
+  <body align=center>
+    <label>First Num</label>
+    <br>
+    <input type="text" placeholder="Enter Number" id="firstnum" >
+    <br>
+    <label>Second Num</label>
+    <br>
+    <input type="text" placeholder="Enter Number" id="secondnum">
+    <br><br>
+    <button type="submit" name="button1" id="Add_Button" >+</button>
+    <button type="submit" name="button1" id="Mult_Button" >*</button>
+    <button type="submit" name="button1" id="Sub_Button" >-</button>
+    <button type="submit" name="button1" id="Div_Button" >/</button>
+
+    <p id="answer"></p>
+    <script>
+    var btn=document.getElementById("Add_Button");
+    var btn2=document.getElementById("Mult_Button");
+    var btn3=document.getElementById("Sub_Button");
+    var btn4=document.getElementById("Div_Button");
+
+    btn.onclick=function()
+    {
+      var num1=document.getElementById("firstnum");
+      var num2=document.getElementById("secondnum");
+      //var sum=Number(num1.value)+Number(num2.value);
+      var sum=parseInt(num1.value)+parseInt(num2.value);
+      //alert(sum);
+      var r=document.getElementById('answer');
+      r.innerHTML=sum;
+    }
+    btn2.onclick=function()
+    {
+      var num1=document.getElementById("firstnum");
+      var num2=document.getElementById("secondnum");
+      //var sum=Number(num1.value)+Number(num2.value);
+      var sum=parseInt(num1.value)*parseInt(num2.value);
+      //alert(sum);
+      var r=document.getElementById('answer');
+      r.innerHTML=sum;
+    }
+    btn3.onclick=function()
+    {
+      var num1=document.getElementById("firstnum");
+      var num2=document.getElementById("secondnum");
+      //var sum=Number(num1.value)+Number(num2.value);
+      var sum=parseInt(num1.value)-parseInt(num2.value);
+      //alert(sum);
+      var r=document.getElementById('answer');
+      r.innerHTML=sum;
+    }
+    btn4.onclick=function()
+    {
+      var num1=document.getElementById("firstnum");
+      var num2=document.getElementById("secondnum");
+      //var sum=Number(num1.value)+Number(num2.value);
+      var sum=parseFloat(num1.value)/parseInt(num2.value);
+      //alert(sum);
+      var r=document.getElementById('answer');
+      r.innerHTML=sum;
+    }
+    console.log(btn);
+    </script>
+    </body>
+</html>
