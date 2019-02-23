@@ -2,67 +2,98 @@
 <html>
 <head>
   <title>Form</title>
+  <style>
+  .button {
+    background-color: #f4511e;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 2px 1px;
+    opacity: 1;
+    transition: 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button:hover {opacity: 0.5}
+  </style>
 </head>
-  <body align=center>
+  <body align=center bgcolor="teal">
+    <font face="Cambria Math" size=5>
     <label>First Num</label>
     <br>
     <input type="text" placeholder="Enter Number" id="firstnum" >
-    <br>
+    <br><br>
     <label>Second Num</label>
     <br>
     <input type="text" placeholder="Enter Number" id="secondnum">
     <br><br>
-    <button type="submit" name="button1" id="Add_Button" >+</button>
-    <button type="submit" name="button1" id="Mult_Button" >*</button>
-    <button type="submit" name="button1" id="Sub_Button" >-</button>
-    <button type="submit" name="button1" id="Div_Button" >/</button>
+    <button type="submit" name="button1" id="Add_Button" class="button" >+</button>
 
+    <button type="submit" name="button2" id="Mult_Button" class="button">*</button>
+    <button type="submit" name="button3" id="Sub_Button" class="button">-</button>
+    <button type="submit" name="button4" id="Div_Button" class="button">/</button>
+    <b><font size=7>
     <p id="answer"></p>
+</font>
+  </b>
     <script>
     var btn=document.getElementById("Add_Button");
     var btn2=document.getElementById("Mult_Button");
     var btn3=document.getElementById("Sub_Button");
     var btn4=document.getElementById("Div_Button");
-
+    var num1=document.getElementById("firstnum");
+    var num2=document.getElementById("secondnum");
     btn.onclick=function()
     {
-      var num1=document.getElementById("firstnum");
-      var num2=document.getElementById("secondnum");
+      if(num1.value==""||num2.value=="")
+        alert("Please Enter Value");
       //var sum=Number(num1.value)+Number(num2.value);
-      var sum=parseInt(num1.value)+parseInt(num2.value);
-      //alert(sum);
-      var r=document.getElementById('answer');
-      r.innerHTML=sum;
+      else
+      {
+        var sum=parseInt(num1.value)+parseInt(num2.value);
+        var r=document.getElementById('answer');
+        r.innerHTML=sum;
+      }
     }
     btn2.onclick=function()
     {
-      var num1=document.getElementById("firstnum");
-      var num2=document.getElementById("secondnum");
+      if(num1.value==""||num2.value=="")
+        alert("Please Enter Value");
+
       //var sum=Number(num1.value)+Number(num2.value);
-      var sum=parseInt(num1.value)*parseInt(num2.value);
-      //alert(sum);
-      var r=document.getElementById('answer');
-      r.innerHTML=sum;
+      else
+      {
+        var sum=parseInt(num1.value)*parseInt(num2.value);
+        var r=document.getElementById('answer');
+        r.innerHTML=sum;
+      }
     }
     btn3.onclick=function()
     {
-      var num1=document.getElementById("firstnum");
-      var num2=document.getElementById("secondnum");
-      //var sum=Number(num1.value)+Number(num2.value);
-      var sum=parseInt(num1.value)-parseInt(num2.value);
-      //alert(sum);
-      var r=document.getElementById('answer');
-      r.innerHTML=sum;
+      if(num1.value==""||num2.value=="")
+        alert("Please Enter Value");
+        else
+        {
+          var sum=parseInt(num1.value)-parseInt(num2.value);
+          var r=document.getElementById('answer');
+          r.innerHTML=sum;
+        }
     }
     btn4.onclick=function()
     {
-      var num1=document.getElementById("firstnum");
-      var num2=document.getElementById("secondnum");
-      //var sum=Number(num1.value)+Number(num2.value);
-      var sum=parseFloat(num1.value)/parseInt(num2.value);
-      //alert(sum);
-      var r=document.getElementById('answer');
-      r.innerHTML=sum;
+      if(num1.value==""||num2.value=="")
+        alert("Please Enter Value");
+        else
+        {
+          var sum=parseInt(num1.value)/parseInt(num2.value);
+          var r=document.getElementById('answer');
+          r.innerHTML=sum;
+        }
     }
     console.log(btn);
     </script>
