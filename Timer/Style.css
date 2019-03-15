@@ -1,0 +1,12 @@
+.input{
+  width:100px;
+  height: 40px;
+  position: absolute;
+  text-align:center;
+  top:50px;
+  left:auto;
+  margin:auto;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: tomato;
+}
