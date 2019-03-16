@@ -74,6 +74,7 @@ function addProducttoDOM(objProduct) {
      var selectedProductIndex = getProductIndex(parseInt(targetParent.id));
      removeFromProductsArray(selectedProductIndex);
      targetParent.parentNode.removeChild(targetParent);
+     console.log(selectedProductIndex);
   }
  );
 
@@ -120,6 +121,7 @@ function getProductDetails(selectedProductIndex) {
 }
 
 function removeFromProductsArray(selectedProductIndex) {
+ localStorage.removeItem("r_data"+(selectedProductIndex+1));
  products.splice(selectedProductIndex,1);
  console.log(products);
 }
@@ -238,7 +240,7 @@ function createNewProductPanel(selectedProductIndex) {
  /* Label - Product Quantity */
  var lblAddProduct = document.createElement("label");
  lblAddProduct.innerHTML = "Add New Product";
- lblAddProduct.setAttribute("style","font-weight:bold;font-size:35px;color:tomato;");
+ lblAddProduct.setAttribute("style","font-weight:bold;color:white;font-size: 35px; font-family:primetime;");
     divAddProduct.appendChild(lblAddProduct);
 
  insertBlankLine(divAddProduct);
@@ -259,7 +261,7 @@ function createNewProductPanel(selectedProductIndex) {
  var txtProductDesc = document.createElement("textarea");
  txtProductDesc.setAttribute("id","txtProductDesc");
     txtProductDesc.setAttribute("placeholder", "Enter the product description");
- txtProductDesc.setAttribute("style","width:250px ;background-color:yellow;height:60px,text-align:center");
+ txtProductDesc.setAttribute("style","width:250px;height:150px;resize:none;background-color:yellow;");
  divAddProduct.appendChild(txtProductDesc);
 
  insertBlankLine(divAddProduct);
@@ -290,7 +292,7 @@ function createNewProductPanel(selectedProductIndex) {
  /* Button - Add Product */
  var btnAddButton = document.createElement("button");
  btnAddButton.setAttribute("id","btnAddButton");
-  btnAddButton.setAttribute("style","background-color:lightblue;border: 5px solid black;height:60px");
+  btnAddButton.setAttribute("style","font-family:consolas;font-size:16px;background-color:lightblue;border: 5px solid black;height:60px;text-align: center;text-decoration: none;display: inline-block;border:none;");
  btnAddButton.innerHTML = "Add Product";
  divAddProduct.appendChild(btnAddButton);
 

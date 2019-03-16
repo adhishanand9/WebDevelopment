@@ -1,0 +1,30 @@
+body{
+}
+#login1{
+  float:left;
+  background-color: teal;
+  display: inline-block;
+  width:200px;
+  height: 50px;
+  font-size: 30px;
+
+  font-family: primetime;
+}
+#register1{
+  float:left;
+  display: inline-block;
+  background-color: lightblue;
+  width:200px;
+  height: 50px;
+  font-size: 30px;
+
+  font-family: primetime;
+}
+.head{
+  align:center;
+}
+p{
+  font-size: 50px;
+  align-self: center;
+  font-family: primetime;
+}

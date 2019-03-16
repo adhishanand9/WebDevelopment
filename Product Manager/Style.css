@@ -3,9 +3,22 @@ body{
 }
 .anc{
   color:white;
-  font-size: 25px;
+  font-size: 35px;
+  font-family:primetime;
 }
 .list{
-  color:tomato;
+  color:white;
   font-size: 35px;
+  font-family:primetime;
+}
+.list1{
+  width:max-content;
+
+}
+::placeholder{
+  color:grey;
+  text-align: left;
+  font-size: 16px;
+  font-weight:normal;
+    font-family:"consolas";
 }
