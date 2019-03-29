@@ -20,16 +20,13 @@ function getUser(val){
     var array=xhr.responseText;
     console.log(array);
     user=JSON.parse(array);
-
+    generateRows();
   };
   xhr.send();
-  generateRows();
 }
-var i=0;
 function  generateRows()
 {
       var row=document.createElement('tr');
-      row.setAttribute('id',i);
       var col1=document.createElement('td');
       var img=document.createElement("IMG");
       img.src=user.avatar_url;
@@ -50,5 +47,5 @@ function  generateRows()
       col1.innerHTML=user.html_url;
       row.appendChild(col1);
       tbody.appendChild(row);
-      i++;
+
 }
