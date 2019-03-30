@@ -1,0 +1,41 @@
+body{
+  background-color: teal;
+
+}
+.input{
+  background-color: lightblue;
+  border: 5px solid black;
+  border-radius: 4px;
+  font-family: "Agency FB";
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 30px;
+  margin: 2px 1px;
+  height:150px;
+  width:200px;
+  align-self: center;
+  cursor:pointer;
+}
+#play{
+  background-color: tomato;
+}
+#pause{
+  background-color: green;
+}
+.ply{
+
+    background-color: lightblue;
+    border: 5px solid black;
+    border-radius: 4px;
+    font-family: "Agency FB";
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    font-size: 30px;
+    margin: 2px 1px;
+    height:80px;
+    width:95px;
+    align-self: center;
+    cursor:pointer;
+}
