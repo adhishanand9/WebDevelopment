@@ -9,14 +9,16 @@ btn.addEventListener("click",function(){
     changeValue1();
     flag=1;
   }
-  else{
+  else if(flag==1){
     changeValue2();
     flag=0;
   }
 });
 ply.addEventListener("click",function(){
+  flag=2;
   if(time==0){
     alert("Time is Zero!");
+    flag=0;
     return;
   }
   time--;
