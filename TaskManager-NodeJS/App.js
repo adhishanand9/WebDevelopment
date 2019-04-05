@@ -46,4 +46,4 @@ http.createServer(function(request, response)
   }
 }).listen(8000, '127.0.0.1');
 
-console.log('Running on 127.0.0.2:8000');
+console.log('Running on 127.0.0.1:8000');
