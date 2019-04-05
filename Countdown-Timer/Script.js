@@ -3,6 +3,7 @@ var ply=document.getElementById('play');
 var pause=document.getElementById('pause');
 var time=0;
 var flag=0;
+var flag2=0;
 var interval1;
 btn.addEventListener("click",function(){
   if(flag==0){
@@ -15,22 +16,29 @@ btn.addEventListener("click",function(){
   }
 });
 ply.addEventListener("click",function(){
-  flag=2;
+  flag2=flag2+1;
   if(time==0){
     alert("Time is Zero!");
-    flag=0;
+    flag=0;flag2=0;
     return;
   }
+
+  console.log(flag2);
+if(flag2==1)
+{
   time--;
-interval1=setInterval(function(){
+  console.log(1);
+  interval1=setInterval(function(){
   btn.setAttribute("value",time);
   time--;
   if(time==-1){
     alert("Time UP!");
     clearInterval(interval1);
-    flag=0;time=0;
+    flag=0;time=0;flag2=0;
     }
   },1000);
+
+}
 });
 pause.addEventListener("click",function(){
   btn.setAttribute("value","0");
