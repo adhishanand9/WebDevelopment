@@ -1,0 +1,26 @@
+body{
+
+}
+.input{
+  background-color: yellow;
+  color:black;
+  height:50px;
+  padding-left: 5px;
+  border-color: black;
+  border-radius: 5px;
+  width:200px;
+  margin-bottom: 20px;
+}
+.button{
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  height:50px;
+}
+.sel1{
+  height:50px;
+  font-size: 16px;
+}
