@@ -22,7 +22,7 @@ function getUser(val){
     user=JSON.parse(array);
 	if(user.id==undefined){
 		alert("Wrong ID Entered.");
-		 return;		
+		 return;
 	}
     generateRows();
   };
@@ -49,6 +49,9 @@ function  generateRows()
 
       var col1=document.createElement('td');
       col1.innerHTML=user.html_url;
+      row.appendChild(col1);
+      var col1=document.createElement('td');
+      col1.innerHTML=user.public_repos;
       row.appendChild(col1);
       tbody.appendChild(row);
 
